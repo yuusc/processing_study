@@ -1,7 +1,7 @@
 import processing.video.*;
  
 Movie movie; //新しい動画像を定義します
-int d = 20;  
+int d = 30;  
  
 void setup() {
   size(1280, 720);//自分の動画像のサイズをチェックしてみてここを変更してください
