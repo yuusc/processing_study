@@ -44,7 +44,7 @@ class EchoClass implements AudioEffect
     for (int i = 0; i < feedback; i++)
     {
       //feedbackの数の分の遅延音量を計算
-      delay_level[i] = sin(dl*(float)(i + 1));
+      delay_level[i] = 0.5/atan(0.5+dl*(float)(i + 1));
     }
   }
    

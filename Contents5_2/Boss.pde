@@ -18,7 +18,7 @@ class Boss {
       dy=-dy;
     }
   }
-  void doShinking(){
+  void emit(){
     routine++;
     if(routine % 10 == 0){
       move();

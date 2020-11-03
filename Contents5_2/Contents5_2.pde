@@ -21,7 +21,7 @@ void draw() {
   noStroke();
   fill(255);
   rect(150, 300, 20, 20);
-  boss.doShinking();
+  boss.emit();
   for (int i = danmaku.size() -1; i  >= 0; i--) {
     Bullet b = (Bullet)danmaku.get(i);
     if (!b.isAlive()) {

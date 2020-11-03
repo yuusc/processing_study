@@ -7,7 +7,7 @@ Minim minim;
 //AudioOutputクラスのオブジェクト変数outの宣言
 AudioOutput out;
 //SineWaveクラスのオブジェクト変数sineの宣言
-SineWave sine;
+SquareWave wave;
  
 // プログラム開始時の事前準備
 void setup()
@@ -16,7 +16,7 @@ void setup()
   size(600, 200);
    
   // フレームレートの設定
-  frameRate(60);
+  frameRate(120);
    
   // 描画結果をアンチエイリアシングする
   smooth();
@@ -28,16 +28,16 @@ void setup()
   minim = new Minim(this);
    
   // 出力先の変数 out にモノラル(もしくはステレオ(STEREO))のオーディオ出力を指定
-  out = minim.getLineOut(Minim.MONO);
+  out = minim.getLineOut(Minim.STEREO);
    
   // 440 Hz、音量 1.0でサイン波を出力
-  sine = new SineWave(440, 1.0, out.sampleRate());
+  wave = new SquareWave(523, 1.0, out.sampleRate());
    
   // ポルタメント（音程変化のなめらかさ）を200msecに
-  sine.portamento(200);
+  wave.portamento(100);
    
   // 生成したサイン波をオーディオ出力に追加するように指定
-  out.addSignal(sine);
+  out.addSignal(wave);
 }
  
 // 描画内容を定める
@@ -73,14 +73,14 @@ void mouseMoved()
   float freq = map(mouseX, 0, width, 20, 8000);
    
   //sine波の周波数の値を設定する
-  sine.setFreq(freq);
+  wave.setFreq(freq);
    
   // マウスの Y座標を音量に設定する
   // Y座標の(0, height)を、周波数(1.0, 0.0)にマップ
   float amp = map(mouseY, 0, height, 1.0, 0);
    
   //sine波の振幅の値を設定する
-  sine.setAmp(amp);
+  wave.setAmp(amp);
 }
  
 // プログラム終了時の処理を定める

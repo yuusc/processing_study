@@ -3,9 +3,9 @@ import ddf.minim.effects.*;
  
 //読み込む音声データのサンプリング周波数に合わせる
 float FS = 48000.0;
-float DELAY_TIME = 0.5;
-float DELAY_LEVEL = 0.5;
-int FEEDBACK = 10;
+float DELAY_TIME = 0.2;
+float DELAY_LEVEL = 0.3;
+int FEEDBACK = 12;
  
 //Minimクラスのオブジェクト変数minimの宣言
 Minim minim;
