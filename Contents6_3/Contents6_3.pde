@@ -24,7 +24,7 @@ void setup() {
   time = 0;
   miss = 0;
   moji_size = x/20; //文字サイズを設定
-  font = createFont("ＭＳ ゴシック",moji_size); //フォントの変更
+  font = createFont("VL Gothic",moji_size); //フォントの変更
   minim = new Minim( this );
   type = minim.loadFile("type.mp3"); //効果音読込
   yes = minim.loadFile("yes.mp3");
