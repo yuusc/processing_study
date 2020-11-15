@@ -10,7 +10,7 @@ Movie myMovie;
 Minim minim;
 AudioPlayer type,jan,yes,no;
 String tmp; //文字列を格納する
-String ans = "University of Tsukuba"; //問題の答え
+String ans = "ITF."; //問題の答え
 PFont font; //フォントを指定するための変数
 int time,miss;
 int x = 1920, y = 1080;//ウィンドウサイズ
@@ -38,7 +38,7 @@ void draw() {
     miss = 0;
     myMovie.pause();
     textFont(font);
-    text("Q.筑波大学の英語表記は?", x/2-moji_size*6, y/2-moji_size);//問題内容
+    text("Q.筑波大学の略称は?", x/2-moji_size*6, y/2-moji_size);//問題内容
     text(tmp, x/2-moji_size*6, y/2+moji_size);
   }
   else if(miss == 1){

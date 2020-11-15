@@ -9,7 +9,7 @@ void setup() {
  
 void draw() {
   y++; //文字位置のy軸を下へずらす
-  textSize(moji_size); //文字サイズを10にする
+  textSize(moji_size); //文字サイズ5をにする
   for(int x = 0;x <= 60; x++){
     if(int(random(4)) == 1){ //文字の出現を1/4にする（乱数は0~3）
       moji = char(int(random(97,122))); //ASCIIコード33~126に対応する文字を表示
